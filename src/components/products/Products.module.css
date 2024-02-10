@@ -1,0 +1,8 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url("../../assets/paper-texture-background-zlvqcgwohwvd642j.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-left: 3rem;
+}

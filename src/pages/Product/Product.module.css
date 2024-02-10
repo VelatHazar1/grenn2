@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../assets/paper-texture-background-zlvqcgwohwvd642j.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100dvh;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+  width: 50%;
+  height: 100%;
+}
+
+.imgContainer img {
+  border-radius: 15px;
+}
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  height: 30rem;
+}
+.infoContainer .title {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+.infoContainer .price {
+  font-size: 2rem;
+}
+
+.infoContainer button {
+  margin-top: 3rem;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 40px;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+}

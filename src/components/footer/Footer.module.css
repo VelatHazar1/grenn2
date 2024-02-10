@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  background-color: aliceblue;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex: 1;
+}
+.desc p {
+  margin: 20px 0;
+}
+.socialContainer {
+  display: flex;
+}
+.socialContainer .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: white;
+  background-color: black;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 20px;
+}
+.center .list {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.center .listItem {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+.right {
+  flex: 1;
+  padding: 20px;
+}
+.title h2 {
+  margin-bottom: 10px;
+}
+.contact p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
