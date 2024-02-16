@@ -10,31 +10,43 @@ body {
   padding: 10px 20px;
   justify-content: space-between;
 }
+
 .language {
   font-size: 14px;
   cursor: pointer;
 }
+
 .left {
   display: flex;
   align-items: center;
   flex: 1;
 }
+
 .section {
+  text-decoration: none;
   margin-right: 10px;
 }
+
 .center {
   flex: 1;
   text-align: center;
 }
+
 .logo {
   font-weight: bold;
+  font-size: 34px;
+  /* clean link style */
+  text-decoration: none;
+  color: black;
 }
+
 .right {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   flex: 1;
 }
+
 .searchContainer {
   display: flex;
   align-items: center;

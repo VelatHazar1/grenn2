@@ -1,9 +1,13 @@
 import Home from "./pages/Home";
 
 import ProductList from "./pages/ProductList/ProductList";
+import Product from "./pages/Product/Product";
+
 import Cart from "./pages/Cart/Cart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartContextProvider } from "./store/index";
+import MansProducts from "./pages/MansProducts/MansProducts";
+import WomansProducts from "./pages/WomansProducts/WomansProducts";
 
 function App() {
   return (
@@ -13,6 +17,15 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/productList" element={<ProductList />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
+          <Route path="/products/:id" element={<Product />}></Route>
+          <Route
+            path="/mansproducts"
+            element={<MansProducts></MansProducts>}
+          ></Route>
+          <Route
+            path="/womansproducts"
+            element={<WomansProducts></WomansProducts>}
+          ></Route>
         </Routes>
       </BrowserRouter>
     </CartContextProvider>

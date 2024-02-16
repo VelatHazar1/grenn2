@@ -36,7 +36,7 @@ function Slider() {
             <h1>SALE</h1>
             <h2>UP TO 60% OFF</h2>
             <p>On selected items</p>
-            <Link to="/productList" className={style.button}>
+            <Link to="/mansproducts" className={style.button}>
               Buy
             </Link>
           </div>
@@ -55,7 +55,9 @@ function Slider() {
             <h1>SALE</h1>
             <h2>UP TO 60% OFF</h2>
             <p>On selected items</p>
-            <button>Buy</button>
+            <Link to="/womansproducts" className={style.button}>
+              Buy
+            </Link>
           </div>
         </div>
       </div>

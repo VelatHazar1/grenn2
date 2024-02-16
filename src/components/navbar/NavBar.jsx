@@ -6,13 +6,17 @@ function NavBar() {
     <div className={style.container}>
       <div className={style.wrapper}>
         <div className={style.left}>
-          <div className={style.section}>Man</div>
-          <div className={style.section}>Woman</div>
+          <Link to="/mansproducts" className={style.section}>
+            Man
+          </Link>
+          <Link to={"/womansproducts"} className={style.section}>
+            Woman
+          </Link>
         </div>
         <div className={style.center}>
-          <div className={style.logo}>
-            <h1>GRENN</h1>
-          </div>
+          <Link to="/" className={style.logo}>
+            GRENN
+          </Link>
         </div>
         <Link to="/cart" className={style.right}>
           <Icon icon="solar:cart-linear" width={30} />

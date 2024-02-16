@@ -82,10 +82,10 @@
 .InfoContainer p {
   font-weight: bold;
   font-size: 1rem;
+  padding-bottom: 2rem;
 }
 
 .InfoContainer .button {
-  margin-top: 1rem;
   background-color: black;
   color: white;
   font-size: 1rem;
@@ -93,4 +93,5 @@
   border-radius: 1rem;
   border: none;
   cursor: pointer;
+  text-decoration: none;
 }

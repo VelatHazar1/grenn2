@@ -33,7 +33,7 @@
   font-size: 2rem;
 }
 
-.infoContainer button {
+.infoContainer .addToCartButton {
   margin-top: 3rem;
   background-color: black;
   color: white;
@@ -42,4 +42,5 @@
   border-radius: 1rem;
   border: none;
   cursor: pointer;
+  text-decoration: none;
 }

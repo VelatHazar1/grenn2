@@ -1,9 +1,11 @@
 import style from "./Cart.module.css";
 import NavBar from "../../components/navbar/NavBar";
 import Footer from "../../components/footer/Footer";
+import { Icon } from "@iconify-icon/react";
 
 import { CartContext } from "../../store/index";
 import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Cart() {
   const { shoppingCart, addToCart, removeFromCart } = useContext(CartContext);
@@ -14,10 +16,12 @@ function Cart() {
         <div className={style.wrapper}>
           <h1 className={style.title}>Your Cart</h1>
           <div className={style.top}>
-            <button className={style.topButton}>Continue Shopping</button>
+            <Link to={"/"} className={style.topButton}>
+              Continue Shopping
+            </Link>
           </div>
           <div className={style.bottom}>
-            {shoppingCart.map((item) => {
+            {shoppingCart.map((item) => (
               <div className={style.product} key={item.id}>
                 <div className={style.info}>
                   <img src={item.img} />
@@ -26,8 +30,12 @@ function Cart() {
                 <div className={style.priceDetail}>
                   <p className={style.price}>${item.price}</p>
                 </div>
-              </div>;
-            })}
+
+                <button onClick={() => removeFromCart(item.id)}>
+                  <Icon icon="pajamas:remove" width={30} height={30} />
+                </button>
+              </div>
+            ))}
           </div>
           <hr />
         </div>

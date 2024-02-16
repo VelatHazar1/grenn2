@@ -1,5 +1,6 @@
 import { useState, useContext, createContext } from "react";
 
+import p8 from "../assets/products/p8.png";
 const CartContext = createContext({
   shoppingCart: [],
   addToCart: () => {},
@@ -7,15 +8,25 @@ const CartContext = createContext({
 });
 
 function CartContextProvider({ children }) {
-  const [shoppingCart, setShoppingCart] = useState([]);
-  const removeFromCart = (product) => {
-    // console.log(product);
+  const [shoppingCart, setShoppingCart] = useState([
+    {
+      id: 8,
+      img: p8,
+      price: 25,
+      name: "Oversize Hoodie",
+    },
+  ]);
+  const removeFromCart = (productId) => {
+    const updatedCart = shoppingCart.filter(
+      (product) => product.id !== productId
+    );
+    setShoppingCart(updatedCart);
   };
   const addToCart = (product) => {
-    console.log(typeof product);
+    console.log(product);
 
-    setShoppingCart([...shoppingCart, ...product]);
-    console.log(typeof shoppingCart);
+    setShoppingCart([...shoppingCart, product]);
+    console.log(shoppingCart);
   };
   return (
     <CartContext.Provider value={{ shoppingCart, addToCart, removeFromCart }}>

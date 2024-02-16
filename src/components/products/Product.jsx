@@ -15,14 +15,16 @@ function Product({ item }) {
             <Link
               to="/cart"
               onClick={() => {
-                addToCart([item]);
+                addToCart(item);
               }}
             >
               <Icon icon="solar:cart-linear" width={30} height={30} />
             </Link>
           </div>
           <div className={style.icon}>
-            <Icon icon="ic:round-search" width={30} height={30} />
+            <Link to={`/products/${item.id}`}>
+              <Icon icon="ic:round-search" width={30} height={30} />
+            </Link>
           </div>
           <div className={style.icon}>
             <Icon icon="mdi:heart-outline" width={30} height={30} />

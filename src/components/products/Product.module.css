@@ -1,5 +1,7 @@
 .container {
-  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 5px;
   position: relative;
 }
@@ -14,9 +16,8 @@
   width: max-content;
 }
 .image img {
-  width: 25rem;
+  width: max-content;
   height: 35rem;
-  border-radius: 15px;
 }
 .info {
   display: flex;
@@ -27,12 +28,12 @@
   position: absolute;
   top: 0;
   background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 15px;
   opacity: 0;
   transition: all 0.5s ease;
 }
 .info:hover {
   opacity: 1;
+  width: 25rem;
 }
 .icon {
   display: flex;
