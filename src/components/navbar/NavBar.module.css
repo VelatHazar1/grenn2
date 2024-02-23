@@ -57,12 +57,16 @@ body {
 }
 
 .amount {
-  background-color: rgb(226, 43, 43);
-  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  width: 1rem;
+
+  background-color: rgb(226, 43, 43);
+  border-radius: 50%;
   color: aliceblue;
   font-weight: bold;
   font-size: 15px;
   margin-bottom: 1rem;
-  width: 1rem;
 }

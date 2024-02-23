@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import style from "./NavBar.module.css";
 import { Icon } from "@iconify-icon/react";
+import { CartContext } from "../../store/index";
+import { useContext } from "react";
 function NavBar() {
+  const { shoppingCart } = useContext(CartContext);
   return (
     <div className={style.container}>
       <div className={style.wrapper}>
@@ -20,7 +23,7 @@ function NavBar() {
         </div>
         <Link to="/cart" className={style.right}>
           <Icon icon="solar:cart-linear" width={30} />
-          <span className={style.amount}>0</span>
+          <span className={style.amount}>{shoppingCart.length}</span>
         </Link>
       </div>
     </div>

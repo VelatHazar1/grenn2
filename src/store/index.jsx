@@ -1,4 +1,5 @@
-import { useState, useContext, createContext } from "react";
+import { useState, createContext } from "react";
+import { popularProducts, mens_products, womens_products } from "../data";
 
 import p8 from "../assets/products/p8.png";
 const CartContext = createContext({
@@ -16,6 +17,27 @@ function CartContextProvider({ children }) {
       name: "Oversize Hoodie",
     },
   ]);
+  const combinedData = [
+    ...popularProducts,
+    ...mens_products,
+    ...womens_products,
+  ];
+
+  const getTotalCartAmount = () => {
+    let totalAmount = 0;
+    for (const item in shoppingCart) {
+      if (shoppingCart[item] > 0) {
+        let itemInfo = combinedData.find(
+          (product) => product.id === Number(item)
+        );
+
+        totalAmount += shoppingCart[item] * itemInfo.price;
+      }
+    }
+
+    return totalAmount;
+  };
+
   const removeFromCart = (productId) => {
     const updatedCart = shoppingCart.filter(
       (product) => product.id !== productId
@@ -23,15 +45,17 @@ function CartContextProvider({ children }) {
     setShoppingCart(updatedCart);
   };
   const addToCart = (product) => {
-    console.log(product);
-
     setShoppingCart([...shoppingCart, product]);
-    console.log(shoppingCart);
+  };
+
+  const contextValue = {
+    shoppingCart,
+    addToCart,
+    removeFromCart,
+    getTotalCartAmount,
   };
   return (
-    <CartContext.Provider value={{ shoppingCart, addToCart, removeFromCart }}>
-      {children}
-    </CartContext.Provider>
+    <CartContext.Provider value={contextValue}>{children}</CartContext.Provider>
   );
 }
 

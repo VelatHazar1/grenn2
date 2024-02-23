@@ -4,10 +4,10 @@ import Footer from "../../components/footer/Footer";
 import { Link, useParams } from "react-router-dom";
 import { popularProducts, mens_products, womens_products } from "../../data";
 import { CartContext } from "../../store/index";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 function Product() {
-  const { shoppingCart, addToCart, removeFromCart } = useContext(CartContext);
+  const { addToCart } = useContext(CartContext);
   // Get the product id from the params:
   const { id } = useParams();
   const combinedData = [
