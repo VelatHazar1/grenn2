@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import style from "./CategoryItem.module.css";
 
 function CategoryItem({ item }) {
@@ -10,7 +11,9 @@ function CategoryItem({ item }) {
         <div className={style.title}>
           <h1>{item.title}</h1>
         </div>
-        <button>Shop Now</button>
+        <Link to={item.url}>
+          <button>Shop Now</button>
+        </Link>
       </div>
     </div>
   );

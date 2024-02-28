@@ -46,6 +46,7 @@
 .center .listItem {
   margin-bottom: 10px;
   font-size: 1.2rem;
+  text-decoration: none;
 }
 .right {
   flex: 1;
@@ -58,4 +59,26 @@
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+  }
+  .center {
+    justify-content: start;
+    padding-left: 2rem;
+  }
+  .center .list {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    list-style: none;
+    text-decoration: none;
+  }
+  .center .listItem {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    text-decoration: none;
+  }
 }

@@ -1,5 +1,6 @@
 import style from "./Footer.module.css";
 import { Icon } from "@iconify-icon/react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -31,10 +32,18 @@ function Footer() {
       <div className={style.center}>
         <div className={style.title}>
           <ul className={style.list}>
-            <li className={style.listItem}>Home</li>
-            <li className={style.listItem}>Cart</li>
-            <li className={style.listItem}>Man Fashion</li>
-            <li className={style.listItem}>Woman Fashion</li>
+            <Link to={"/"}>
+              <li className={style.listItem}>Home</li>
+            </Link>
+            <Link to={"/cart"}>
+              <li className={style.listItem}>Cart</li>
+            </Link>
+            <Link to={"/mansproducts"}>
+              <li className={style.listItem}>Man Fashion</li>
+            </Link>
+            <Link to={"/womansproducts"}>
+              <li className={style.listItem}>Woman Fashion</li>
+            </Link>
           </ul>
         </div>
       </div>

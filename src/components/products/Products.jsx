@@ -4,11 +4,14 @@ import Product from "./Product";
 
 function Products() {
   return (
-    <div className={style.container}>
-      {popularProducts.map((item) => (
-        <Product item={item} key={item.id}></Product>
-      ))}
-    </div>
+    <>
+      <h1 className={style.title}>It May Interest You</h1>
+      <div className={style.container}>
+        {popularProducts.map((item) => (
+          <Product item={item} key={item.id}></Product>
+        ))}
+      </div>
+    </>
   );
 }
 

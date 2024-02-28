@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap");
+
+.product img {
+  width: 25rem;
+  height: 35rem;
+  cursor: pointer;
+}
+
+.containerCarousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.product {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  position: relative;
+}
+.product p {
+  margin: 0;
+}
+
+.productPrice {
+  color: red;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2px;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+.products img {
+  width: 100%;
+}

@@ -7,31 +7,33 @@ import { useContext, useState } from "react";
 function Product({ item }) {
   const { shoppingCart, addToCart, removeFromCart } = useContext(CartContext);
   return (
-    <div className={style.container}>
-      <div className={style.image}>
-        <img src={item.img} alt="Product Image" />
-        <div className={style.info}>
-          <div className={style.icon}>
-            <Link
-              to="/cart"
-              onClick={() => {
-                addToCart(item);
-              }}
-            >
-              <Icon icon="solar:cart-linear" width={30} height={30} />
-            </Link>
-          </div>
-          <div className={style.icon}>
-            <Link to={`/products/${item.id}`}>
-              <Icon icon="ic:round-search" width={30} height={30} />
-            </Link>
-          </div>
-          <div className={style.icon}>
-            <Icon icon="mdi:heart-outline" width={30} height={30} />
+    <>
+      <div className={style.container}>
+        <div className={style.image}>
+          <img src={item.img} alt="Product Image" />
+          <div className={style.info}>
+            <div className={style.icon}>
+              <Link
+                to="/cart"
+                onClick={() => {
+                  addToCart(item);
+                }}
+              >
+                <Icon icon="solar:cart-linear" width={30} height={30} />
+              </Link>
+            </div>
+            <div className={style.icon}>
+              <Link to={`/products/${item.id}`}>
+                <Icon icon="ic:round-search" width={30} height={30} />
+              </Link>
+            </div>
+            <div className={style.icon}>
+              <Icon icon="mdi:heart-outline" width={30} height={30} />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

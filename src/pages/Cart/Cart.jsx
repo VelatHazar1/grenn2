@@ -4,13 +4,27 @@ import Footer from "../../components/footer/Footer";
 import { Icon } from "@iconify-icon/react";
 
 import { CartContext } from "../../store/index";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 function Cart() {
-  const { shoppingCart, removeFromCart, getTotalCartAmount } =
-    useContext(CartContext);
-  const totalAmount = getTotalCartAmount();
+  const { shoppingCart, removeFromCart } = useContext(CartContext);
+
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  const handleTotalPrice = () => {
+    let total = 0;
+
+    shoppingCart.forEach((item) => {
+      total += item.price;
+    });
+
+    setTotalPrice(total);
+  };
+
+  useEffect(() => {
+    handleTotalPrice();
+  });
   return (
     <>
       <NavBar></NavBar>
@@ -32,7 +46,6 @@ function Cart() {
                 <div className={style.priceDetail}>
                   <p className={style.price}>${item.price}</p>
                 </div>
-
                 <button onClick={() => removeFromCart(item.id)}>
                   <Icon icon="pajamas:remove" width={30} height={30} />
                 </button>
@@ -43,7 +56,7 @@ function Cart() {
         </div>
       </div>
       <div className={style.summary}>
-        <h2> {totalAmount}</h2>
+        <h2> ${totalPrice}</h2>
         <button className={style.order}>Order</button>
       </div>
       <Footer></Footer>

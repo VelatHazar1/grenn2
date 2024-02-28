@@ -1,9 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
+
   flex-wrap: wrap;
   background-image: url("../../assets/paper-texture-background-zlvqcgwohwvd642j.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.title {
+  text-align: center;
+  padding-bottom: 2rem;
+  font-family: "Italiana", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3rem;
 }

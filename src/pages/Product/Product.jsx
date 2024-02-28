@@ -2,7 +2,14 @@ import style from "./Product.module.css";
 import NavBar from "../../components/navbar/NavBar";
 import Footer from "../../components/footer/Footer";
 import { Link, useParams } from "react-router-dom";
-import { popularProducts, mens_products, womens_products } from "../../data";
+import {
+  popularProducts,
+  mens_products,
+  womens_products,
+  accesories,
+  loungeWear,
+  summerWear,
+} from "../../data";
 import { CartContext } from "../../store/index";
 import { useContext } from "react";
 
@@ -14,6 +21,9 @@ function Product() {
     ...popularProducts,
     ...mens_products,
     ...womens_products,
+    ...accesories,
+    ...loungeWear,
+    ...summerWear,
   ];
   return (
     <>
