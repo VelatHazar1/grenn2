@@ -95,3 +95,59 @@
   cursor: pointer;
   text-decoration: none;
 }
+
+/* Add media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  .slide {
+    flex-direction: column;
+  }
+
+  .ImageContainer {
+    flex: none;
+    height: auto;
+    margin: 2rem auto;
+  }
+
+  .ImageContainer img {
+    height: 40rem;
+    width: 70%;
+    margin: 0;
+  }
+
+  .InfoContainer {
+    height: 1rem;
+    margin: 0;
+  }
+
+  .InfoContainer h1 {
+    font-size: 5rem;
+  }
+
+  .InfoContainer h2 {
+    font-size: 3rem;
+  }
+
+  .InfoContainer p {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .ImageContainer img {
+    height: 30rem;
+    width: 100%;
+    margin: 0;
+  }
+
+  .InfoContainer {
+    padding: 20px;
+  }
+
+  .InfoContainer h1 {
+    font-size: 3rem;
+  }
+
+  .InfoContainer h2 {
+    font-size: 2rem;
+  }
+}
