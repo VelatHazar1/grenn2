@@ -98,6 +98,9 @@
 
 /* Add media queries for responsiveness */
 @media only screen and (max-width: 768px) {
+  .container {
+    height: 120vh;
+  }
   .slide {
     flex-direction: column;
   }
